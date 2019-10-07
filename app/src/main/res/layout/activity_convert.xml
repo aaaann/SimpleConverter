@@ -14,7 +14,7 @@
         android:layout_marginRight="10dp">
 
         <TextView
-            android:id="@+id/convert__from_tv"
+            android:id="@+id/convert_from_tv"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:text="Километер"/>

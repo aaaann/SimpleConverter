@@ -61,7 +61,7 @@ private IMainItemClickListener mMainItemClickListener;
         }
 
         private void bindView(final Conversion conversion) {
-            mType.setText(conversion.getmName());
+            mType.setText(conversion.getLabel());
             itemView.setOnClickListener(v -> mMainItemClickListener.onMainItemClick(conversion));
         }
 }

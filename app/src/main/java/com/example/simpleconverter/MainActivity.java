@@ -10,14 +10,14 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.simpleconverter.adapters.ConversionTypeAdapter;
-import com.example.simpleconverter.dataprovider.ConversionsProvider;
 import com.example.simpleconverter.listeners.IMainItemClickListener;
 import com.example.simpleconverter.models.Conversion;
 
+import java.util.Arrays;
+
 public class MainActivity extends AppCompatActivity implements IMainItemClickListener {
 
-    private static final String CONVERSION_EXTRA = "conversion";
-    private ConversionsProvider provider = new ConversionsProvider();
+    public static final String CONVERSION_EXTRA = "CONVERSION";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements IMainItemClickLis
         LinearLayoutManager layoutManager = new LinearLayoutManager(this, RecyclerView.VERTICAL, false);
         recyclerView.setLayoutManager(layoutManager);
 
-        ConversionTypeAdapter adapter = new ConversionTypeAdapter(provider.provideConversions(),this);
+        ConversionTypeAdapter adapter = new ConversionTypeAdapter(Arrays.asList(Conversion.values()),this);
         recyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL));
         recyclerView.setAdapter(adapter);
     }
