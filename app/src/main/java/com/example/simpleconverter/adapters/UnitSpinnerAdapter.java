@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import com.example.simpleconverter.models.Conversion;
 import com.example.simpleconverter.models.Unit;
 
 import java.util.List;

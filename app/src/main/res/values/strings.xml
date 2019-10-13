@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">SimpleConverter</string>
+    <string name="to">В</string>
+    <string name="from">Из</string>
 </resources>

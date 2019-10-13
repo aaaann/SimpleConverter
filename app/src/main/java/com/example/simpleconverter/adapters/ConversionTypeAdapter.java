@@ -8,7 +8,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.simpleconverter.MainActivity;
 import com.example.simpleconverter.R;
 import com.example.simpleconverter.listeners.IMainItemClickListener;
 import com.example.simpleconverter.models.Conversion;
@@ -43,10 +42,6 @@ private IMainItemClickListener mMainItemClickListener;
     public int getItemCount() {
         return mConversions.size();
     }
-
-//    public void setConversions(List<Conversion> convserions) {
-//        mConversions = new ArrayList<>(convserions);
-//    }
 
 
     static class ConversionTypeHolder extends RecyclerView.ViewHolder {
