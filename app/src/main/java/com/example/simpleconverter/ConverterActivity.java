@@ -124,10 +124,10 @@ public class ConverterActivity extends AppCompatActivity {
         Unit currentUnitFrom = mConversion.getUnits().get(spinnerFrom.getSelectedItemPosition());
         Unit currentUnitTo = mConversion.getUnits().get(spinnerTo.getSelectedItemPosition());
         if (convertFromEditText.hasFocus()) {
-            convertToEditText.setText(convertFromEditText.getText().length() == 0 ? "" : String.format("%1.6f", (Double.parseDouble(convertFromEditText.getText().toString()) * currentUnitFrom.getProportion())
+            convertToEditText.setText(convertFromEditText.getText().length() == 0 ? "" : String.format(getString(R.string.format), (Double.parseDouble(convertFromEditText.getText().toString()) * currentUnitFrom.getProportion())
                     / currentUnitTo.getProportion()));
         } else if (convertToEditText.hasFocus()){
-            convertFromEditText.setText(convertToEditText.getText().length() == 0 ? "" : String.format("%1.6f", (Double.parseDouble(convertToEditText.getText().toString()) * currentUnitTo.getProportion())
+            convertFromEditText.setText(convertToEditText.getText().length() == 0 ? "" : String.format(getString(R.string.format), (Double.parseDouble(convertToEditText.getText().toString()) * currentUnitTo.getProportion())
                     / currentUnitFrom.getProportion()));
         }
     }

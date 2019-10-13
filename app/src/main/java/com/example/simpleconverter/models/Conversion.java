@@ -1,12 +1,13 @@
 package com.example.simpleconverter.models;
 
+import com.example.simpleconverter.R;
+
 import java.util.Arrays;
 import java.util.List;
 
 import static com.example.simpleconverter.models.Unit.ACRE;
 import static com.example.simpleconverter.models.Unit.AED;
 import static com.example.simpleconverter.models.Unit.ARE;
-import static com.example.simpleconverter.models.Unit.C;
 import static com.example.simpleconverter.models.Unit.CBCM;
 import static com.example.simpleconverter.models.Unit.CBFT;
 import static com.example.simpleconverter.models.Unit.CBINCH;
@@ -16,7 +17,6 @@ import static com.example.simpleconverter.models.Unit.CHF;
 import static com.example.simpleconverter.models.Unit.CM;
 import static com.example.simpleconverter.models.Unit.DKK;
 import static com.example.simpleconverter.models.Unit.EUR;
-import static com.example.simpleconverter.models.Unit.F;
 import static com.example.simpleconverter.models.Unit.FT;
 import static com.example.simpleconverter.models.Unit.GALLON;
 import static com.example.simpleconverter.models.Unit.GBP;
@@ -54,22 +54,22 @@ import static com.example.simpleconverter.models.Unit.USD;
 import static com.example.simpleconverter.models.Unit.YD;
 
 public enum Conversion {
-    CURRENCY("Валюта", Arrays.asList(RUB, USD, GBP, EUR, CHF, SEK, DKK, NOK, SGD, INR,AED, KRW, THB, ILS, JPY, UAH)),
-    WEIGHT("Вес", Arrays.asList(KILOGRAM, GRAM, MILLIGRAM, TON, GRAN, OUNCE, LB)),
-    LENGTH("Длина",Arrays.asList(MM, CM, M, KM, INCH, FT, YD, MILE)),
-    VOLUME("Объём", Arrays.asList(CBCM, CBM, LITER, CBINCH, CBFT, CBYD, GALLON)),
-    AREA("Площадь", Arrays.asList(SQCM, SQM, ARE, SQINCH, SQFT, SQYD, ACRE, HA, SQMILE));
+    CURRENCY(R.string.Currency, Arrays.asList(RUB, USD, GBP, EUR, CHF, SEK, DKK, NOK, SGD, INR,AED, KRW, THB, ILS, JPY, UAH)),
+    WEIGHT(R.string.Weight, Arrays.asList(KILOGRAM, GRAM, MILLIGRAM, TON, GRAN, OUNCE, LB)),
+    LENGTH(R.string.Length,Arrays.asList(MM, CM, M, KM, INCH, FT, YD, MILE)),
+    VOLUME(R.string.Volume, Arrays.asList(CBCM, CBM, LITER, CBINCH, CBFT, CBYD, GALLON)),
+    AREA(R.string.Area, Arrays.asList(SQCM, SQM, ARE, SQINCH, SQFT, SQYD, ACRE, HA, SQMILE));
 
 
-    private final String mLabel;
+    private final int mLabel;
     private final List<Unit> mUnits;
 
-    Conversion(String label, List<Unit> units) {
+    Conversion(int label, List<Unit> units) {
         mLabel = label;
         mUnits = units;
     }
 
-    public String getLabel() {
+    public int getLabel() {
         return mLabel;
     }
 

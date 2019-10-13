@@ -1,26 +1,27 @@
 package com.example.simpleconverter.models;
 
+import com.example.simpleconverter.R;
+
 public enum Unit {
 
-    RUB("Рубль", 0.014), USD("Доллар", 0.761789), GBP("Фунт", 1.454334),EUR("Евро", 1),CHF("Швейцарский франк",0.646747),
-    SEK("Шведская Крона", 0.110558), DKK("Датская Крона", 0.134371), NOK("Норвежская Крона", 0.121708),SGD("Сингапурский доллар", 0.468867), INR("Рупия", 0.017494), AED("Дирхам", 0.207577),
-    KRW("Вона", 0.000758), THB("Бат", 0.019682),ILS("Шекель", 0.175688),JPY("Иена", 0.007261), UAH("Гривна", 0.037),
+    RUB(R.string.Rub, 0.014), USD(R.string.USD, 0.761789), GBP(R.string.GBP, 1.454334),EUR(R.string.EUR, 1),CHF(R.string.CHF,0.646747),
+    SEK(R.string.SEK, 0.110558), DKK(R.string.DKK, 0.134371), NOK(R.string.NOK, 0.121708),SGD(R.string.SGD, 0.468867), INR(R.string.INR, 0.017494), AED(R.string.AED, 0.207577),
+    KRW(R.string.KRW, 0.000758), THB(R.string.THB, 0.019682),ILS(R.string.ILS, 0.175688),JPY(R.string.JPY, 0.007261), UAH(R.string.UAH, 0.037),
 
-    KILOGRAM("Килограмм", 1000), GRAM("Грамм", 1), MILLIGRAM("Миллиграм", 0.001), TON("Тонна", 1000000),
-    GRAN("Гран", 0.0648), OUNCE("Унция", 28.350296), LB("Фунт", 453.599082),
+    KILOGRAM(R.string.KILOGRAM, 1000), GRAM(R.string.GRAM, 1), MILLIGRAM(R.string.MILLIGRAM, 0.001), TON(R.string.TON, 1000000),
+    GRAN(R.string.GRAN, 0.0648), OUNCE(R.string.OUNCE, 28.350296), LB(R.string.LB, 453.599082),
 
-    MM("Милиметр", 0.1), CM("Сантиметр", 1), M("Метр", 100), KM("Километр", 100000), INCH("Дюйм", 2.540005), FT("Фут", 30.480371), YD("Ярд", 91.441112), MILE("Миля", 160926.93917),
+    MM(R.string.MM, 0.1), CM(R.string.CM, 1), M(R.string.M, 100), KM(R.string.KM, 100000), INCH(R.string.INCH, 2.540005), FT(R.string.FT, 30.480371), YD(R.string.YD, 91.441112), MILE(R.string.MILE, 160926.93917),
 
-    CBCM("См^3", 1), CBM("М^3", 1000000), LITER("Литр", 1000), CBINCH("Дюйм^3", 16.38619), CBFT("Фут^3", 28315.37665), CBYD("Ярд^3", 764409.111757), GALLON("Галлон", 4546.095132),
+    CBCM(R.string.CBCM, 1), CBM(R.string.CBM, 1000000), LITER(R.string.LITER, 1000), CBINCH(R.string.CBUNCH, 16.38619), CBFT(R.string.CBFT, 28315.37665), CBYD(R.string.CBYD, 764409.111757), GALLON(R.string.GALLON, 4546.095132),
 
-    SQCM("См^2", 1), SQM("М^2", 10000), ARE("Ар", 1000000), SQINCH("Дюйм^2", 6.451613), SQFT("Фут^2", 929.022668), SQYD("Ярд^2", 8361.204013), ACRE("Акр", 40469445.568596), HA("Гектар", 100000000), SQMILE("Миля^2", 25899891738.4525),
+    SQCM(R.string.SQCM, 1), SQM(R.string.SQM, 10000), ARE(R.string.ARE, 1000000), SQINCH(R.string.SQINCH, 6.451613), SQFT(R.string.SQFT, 929.022668), SQYD(R.string.SQYD, 8361.204013), ACRE(R.string.ACRE, 40469445.568596), HA(R.string.HA, 100000000), SQMILE(R.string.SQMILE, 25899891738.4525);
 
-    C("°C", 1), F("°F", -17.222222);
 
-    private final String mName;
+    private final int mName;
     private final double mProportion;
 
-    public String getName() {
+    public int getName() {
         return mName;
     }
 
@@ -29,7 +30,7 @@ public enum Unit {
     }
 
 
-    Unit(String name, double proportion) {
+    Unit(int name, double proportion) {
         mName = name;
         mProportion = proportion;
     }
