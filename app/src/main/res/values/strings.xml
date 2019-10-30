@@ -55,4 +55,5 @@
     <string name="MILE">Миля</string>
     <string name="AED">Дирхам</string>
     <string name="format">%1.6f</string>
+    
 </resources>

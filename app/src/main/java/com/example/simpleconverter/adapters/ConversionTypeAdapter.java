@@ -15,10 +15,10 @@ import com.example.simpleconverter.models.Conversion;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConversionTypeAdapter extends RecyclerView.Adapter<ConversionTypeAdapter.ConversionTypeHolder>{
+public class ConversionTypeAdapter extends RecyclerView.Adapter<ConversionTypeAdapter.ConversionTypeHolder> {
 
-private List<Conversion> mConversions;
-private IMainItemClickListener mMainItemClickListener;
+    private List<Conversion> mConversions;
+    private IMainItemClickListener mMainItemClickListener;
 
     public ConversionTypeAdapter(List<Conversion> conversions, IMainItemClickListener mainItemClickListener) {
         mConversions = new ArrayList<>(conversions);
@@ -59,6 +59,6 @@ private IMainItemClickListener mMainItemClickListener;
             mType.setText(conversion.getLabel());
             itemView.setOnClickListener(v -> mMainItemClickListener.onMainItemClick(conversion));
         }
-}
+    }
 
 }
